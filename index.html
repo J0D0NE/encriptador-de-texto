@@ -5,25 +5,26 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial scale=1.0" />
+        <meta name="viewport" content="width=device-width"/>
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
     </head> 
     <body>
-        <div class="container">
+        <main class="container">
+            <header>
+                <img class="logo-alura" img src="vector.png">
+            </header>
+            
             <div class="encriptar">
-                <textarea name="texto" 
-                    class="texto" 
-                    id="texto" 
-                    cols="30" 
-                    rows="10" 
-                    placeholder="Ingresa el texto aqui.">
-                </textarea>
+                <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingrese su mensaje aqui..."></textarea>
                     
                 <div class="terminos">
-                    <p>Solo letras minusculas y sin acentos</p>
+                    <p>&#42; Solo letras minúsculas y sin acentos</p>
                 </div>
+
                 <div class="botones">
                     <button class="b_encriptar" type="button" onclick="encriptar()">
                         Encriptar
@@ -34,27 +35,17 @@
                 </div>
             </div>
             <div class="encriptado">
-                <img class="i_referencial" src="" alt="">
                 <div class="mensaje-encriptado" id="mensaje-encriptado">
-                    <h2 class="titulo-mensaje">Ningun mensaje encontrado</h2>
-                    <p class="parrafo">Ingresa el texto para encriptar o desencriptar</p> 
-                    <textarea name="mensaje" 
-                        id="mensaje" 
-                        cols="30" 
-                        rows="10" 
-                        class="mensaje">
-                    </textarea>
+                    <h2 class="titulo-mensaje" id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
+                    <p class="parrafo" id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p> 
+                    <textarea class="caja-mensaje" name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
                     <button class="copiar" type="button" onclick="copiar()">
                         Copiar
                     </button>     
                 </div>
             </div>
-        </div>    
+        </main>    
     </body>
     <script src="index.js"></script>        
            
 </html>
-
-
-
-        
