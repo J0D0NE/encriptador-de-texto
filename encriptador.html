@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="encriptador.js"></script>
+        <title>Encriptador</title>
+        <link rel="shortcut icon" href="./vector.png" type="image/x-icon">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="estilos.css">
+        
+    </head>
+    
+    <body>
+        <header>
+            <h1 class="logo"><img src="./vector.png" alt="logo Alura"></h1>
+        </header>
+
+        <main>
+            <input type="text" class="textoencriptado" id="textoencriptado" placeholder="ingrese el texto aqui...">
+            <p class="terminos">&#42; Solo letras minusculas y sin acentos</p>
+            <div class="botones">
+                <button type="button" class="b_encriptar" id="botonencriptado">Encriptar</button>
+                <button type="button" class="b_desencriptar" id="botondesencriptado">Desencriptar</button>
+            </div>
+            <div class="cuadroresultado">
+                <img class="munheco" src="Muñeco.png">
+                <h2 class="titulo-mensaje" id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
+                <textarea name="resultado"  class="textodesencriptado" id="textodesencriptado" cols="30" rows="10"></textarea>
+                <p class="parrafo" id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button type="button" class="b_copiar" id="botoncopiar">Copiar</button>
+            </div>
+            
+        </main>
+    </body>
+    <script>
+        var btn = document.querySelector("#botonencriptado");
+        btn.onclick = encriptar;
+        var btn2 = document.querySelector("#botondesencriptado");
+        btn2.onclick = desencriptar;
+        var btn3 = document.querySelector("#botoncopiar");
+        btn3.onclick = copiar;
+    </script>
+</html>        
